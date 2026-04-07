@@ -74,7 +74,7 @@ public class MenuConfig {
     public Pizza doubleHamPizza(
             @Qualifier("ham") Topping ham
     ) {
-        return new Pizza("Margherita + doppio prosciutto", List.of(ham, ham));
+        return new Pizza("Margherita + double ham", List.of(ham, ham));
     }
 
     // opzionale XL

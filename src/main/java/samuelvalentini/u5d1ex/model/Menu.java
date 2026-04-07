@@ -32,7 +32,7 @@ public class Menu {
         sb.append("Pizzas\n");
         sb.append("-----------------------------------------------\n");
         for (Pizza pizza : pizzas) {
-            sb.append(String.format("%-45s %6d %8.2f%n",
+            sb.append(String.format("%-60s %6d %8.2f%n",
                     pizza.toString(),
                     pizza.getCalories(),
                     pizza.getPrice()));
@@ -41,7 +41,7 @@ public class Menu {
         sb.append("\nToppings\n");
         sb.append("-----------------------------------------------\n");
         for (Topping topping : toppings) {
-            sb.append(String.format("%-45s %6d %8.2f%n",
+            sb.append(String.format("%-60s %6d %8.2f%n",
                     topping.getName(),
                     topping.getCalories(),
                     topping.getPrice()));
@@ -50,7 +50,7 @@ public class Menu {
         sb.append("\nDrinks\n");
         sb.append("-----------------------------------------------\n");
         for (Drink drink : drinks) {
-            sb.append(String.format("%-45s %6d %8.2f%n",
+            sb.append(String.format("%-60s %6d %8.2f%n",
                     drink.toString(),
                     drink.getCalories(),
                     drink.getPrice()));
