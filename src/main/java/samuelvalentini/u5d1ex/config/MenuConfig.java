@@ -16,6 +16,11 @@ public class MenuConfig {
     }
 
     @Bean
+    public Topping blueCheese() {
+        return new Topping("blue-cheese", 1.2, 122);
+    }
+
+    @Bean
     public Topping ham() {
         return new Topping("ham", 0.99, 35);
     }
@@ -77,7 +82,6 @@ public class MenuConfig {
         return new Pizza("Margherita + double ham", List.of(ham, ham));
     }
 
-    // opzionale XL
     @Bean
     public Pizza hawaiianPizzaXl(
             @Qualifier("ham") Topping ham,
@@ -86,9 +90,18 @@ public class MenuConfig {
         return new Pizza("Hawaiian Pizza", List.of(ham, pineapple), PizzaSize.XL);
     }
 
-    // MENU
+    @Bean
+    public Pizza salamiPizzaXL(
+            @Qualifier("salami") Topping salami
+    ) {
+        return new Pizza("Salami Pizza", List.of(salami), PizzaSize.XL);
+    }
+
+
     @Bean
     public Menu menu(List<Pizza> pizzas, List<Topping> toppings, List<Drink> drinks) {
         return new Menu(pizzas, toppings, drinks);
     }
+
+
 }
